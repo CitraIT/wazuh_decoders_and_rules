@@ -4,8 +4,7 @@
  <program_name>php-fpm</program_name>
 </decoder>
 <!--
-May 14 17:11:09 pfSense php-fpm[361]: /index.php: Successful login for user 'admin' from: 
-192.168.0.175 (Local Database) 
+May 14 17:11:09 pfSense php-fpm[361]: /index.php: Successful login for user 'admin' from: 192.168.0.175 (Local Database) 
 -->
 <decoder name="pfsense-php">
  <parent>pfsense-php</parent>
@@ -13,8 +12,7 @@ May 14 17:11:09 pfSense php-fpm[361]: /index.php: Successful login for user 'adm
  <order>loginpage,username,fromip,authdatabase</order>
 </decoder>
 <!--
-May 14 17:13:41 pfSense php-fpm[361]: /wizard.php: Configuration Change: admin@192.168.0.175 
-(Local Database): Configuration changed via the wizard subsystem.
+May 14 17:13:41 pfSense php-fpm[361]: /wizard.php: Configuration Change: admin@192.168.0.175 (Local Database): Configuration changed via the wizard subsystem.
 -->
 <decoder name="pfsense-php">
  <parent>pfsense-php</parent>
