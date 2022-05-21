@@ -1,0 +1,23 @@
+<!-- Modify it at your will. -->
+<!-- PFSENSE PHP-FPM EVENTS -->
+<decoder name="pfsense-php">
+ <program_name>php-fpm</program_name>
+</decoder>
+<!--
+May 14 17:11:09 pfSense php-fpm[361]: /index.php: Successful login for user 'admin' from: 
+192.168.0.175 (Local Database) 
+-->
+<decoder name="pfsense-php">
+ <parent>pfsense-php</parent>
+ <regex type="pcre2">(.*\.php): Successful login for user '(\S+)' from: ([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}) \((.*)\)</regex>
+ <order>loginpage,username,fromip,authdatabase</order>
+</decoder>
+<!--
+May 14 17:13:41 pfSense php-fpm[361]: /wizard.php: Configuration Change: admin@192.168.0.175 
+(Local Database): Configuration changed via the wizard subsystem.
+-->
+<decoder name="pfsense-php">
+ <parent>pfsense-php</parent>
+ <regex type="pcre2">(.*\.php): Configuration Change: (\S+)@([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}) \((.*)\): (.*)</regex>
+ <order>changepage,username,fromip,authdatabase,message</order>
+</decoder>
