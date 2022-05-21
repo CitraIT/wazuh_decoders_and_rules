@@ -1,0 +1,15 @@
+<!-- Modify it at your will. -->
+<group name="pfsense,">
+<rule id="87703" level="10" >
+  <decoded_as>pfsense-php</decoded_as>
+  <match>Successful login for user</match>-->
+  <description>A new login was detected in pfSense webGui.</description>
+ </rule>
+</group>
+<group name="pfsense,">
+<rule id="87704" level="10" >
+  <decoded_as>pfsense-php</decoded_as>
+  <match>Configuration Change</match>-->
+  <description>A configuration change was detected in pfSense firewall.</description>
+ </rule>
+</group>
