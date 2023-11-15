@@ -1,0 +1,57 @@
+<group name="nextcloud,">
+  <rule id="88200" level="3" >
+    <decoded_as>nextcloud</decoded_as>
+    <description>nextcloud grouped rules</description>
+  </rule>
+  <rule id="88201" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>File accessed:</regex>
+    <description>NextCloud file access</description>
+  </rule>
+  <rule id="88202" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>File deleted:</regex>
+    <description>NextCloud file exclusion</description>
+  </rule>
+  <rule id="88203" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>File written to:</regex>
+    <description>NextCloud file write</description>
+  </rule>
+  <rule id="88204" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>File created:</regex>
+    <description>NextCloud file create</description>
+  </rule>
+  <rule id="88205" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>has been shared via link</regex>
+    <description>NextCloud shared via link</description>
+  </rule>
+  <rule id="88206" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>has been shared to the user</regex>
+    <description>NextCloud shared with user</description>
+  </rule>
+  <rule id="88207" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>has been unshared</regex>
+    <description>NextCloud unshare</description>
+  </rule>
+  <rule id="88208" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>The shared folder with the token \.* by \.* has been accessed.</regex>
+    <description>NextCloud shared folder access</description>
+  </rule>
+    <rule id="88209" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>The shared file with the token \.* by \.* has been accessed.</regex>
+    <description>NextCloud shared file access</description>
+  </rule>
+    <rule id="88210" level="3" >
+    <if_sid>88200</if_sid>
+    <regex>has been shared to the email</regex>
+    <description>NextCloud shared with email</description>
+  </rule>
+  
+</group>

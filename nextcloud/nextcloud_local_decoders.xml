@@ -1,0 +1,5 @@
+<decoder name="nextcloud">
+    <program_name>^NextCloud</program_name>
+    <regex>"reqId":"(\.*)","level":(\d),"time":"(\.*)","remoteAddr":"(\.*)","user":"(\w+)","app":"(admin_audit)","method":"(\w+)","url":"(\.*)","message":(\.*),"userAgent":"(\.*)"</regex>
+    <order>reqId,level,time,remoteAddr,user,app,method,url,message,userAgent</order>
+</decoder>
